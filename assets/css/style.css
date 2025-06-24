@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    /* background: linear-gradient(rgba(54, 54, 54, 0.4), rgba(0, 0, 0, 0.4)); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,16 +18,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-image: url('../img/logo_mono.png'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
     opacity: 0.30;
-    /* más sutil */
-    /* filter: blur(2px); */
 }
-
 
 .content {
     z-index: 1;
@@ -51,10 +46,6 @@ body::before {
     margin-bottom: 20px;
 }
 
-.text_white {
-    color: #fff;
-}
-
 .username {
     font-weight: bold;
     font-size: 1rem;
@@ -62,25 +53,16 @@ body::before {
 
 .location {
     font-size: 0.80rem;
-
 }
 
 .location i {
     margin-right: 5px;
-    /* color: #e2ff3d; */
 }
 
 .slogan {
     font-style: italic;
     font-size: .95rem;
     margin-top: 6px;
-}
-
-
-h1 {
-    font-size: 1.5rem;
-    margin: 20px 0 10px;
-    text-align: center;
 }
 
 .link-container {
@@ -94,9 +76,7 @@ h1 {
 .link-container a {
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.05);
-    /* fondo translúcido */
     border: 1.5px solid rgba(3, 3, 3, 0.466);
-    /* borde tenue */
     padding: 14px 20px;
     text-align: center;
     color: #000;
@@ -107,11 +87,8 @@ h1 {
     justify-content: center;
     gap: 10px;
     backdrop-filter: blur(6px);
-    /* desenfoque elegante */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    /* sombra sutil */
     transition: transform 0.2s ease, box-shadow 0.3s ease;
-    /* box-shadow: 0 4px 15px rgb(131, 130, 130); */
 }
 
 .link-container a:active {
@@ -123,154 +100,9 @@ h1 {
     font-size: 1.2rem;
 }
 
-.link {
-    text-decoration: none;
-    background-color: #e2ff3d;
-    border: 2px solid #e2ff3d;
-    padding: 14px 20px;
-    text-align: center;
-    color: #000 !important;
-    font-weight: bold;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: transform 0.2s ease;
-    animation: glow 2s ease-in-out infinite;
-}
-
-
-
-.link:active {
-    background-color: #e2ff3d;
-    transform: scale(0.97);
-}
-
-.link i {
-    font-size: 1.2rem;
-}
-
-.link:hover {
-    background-color: #e2ff3d;
-    transform: scale(1.03);
-}
-
 footer {
-    margin-top: 40px;
+    margin-top: 100px;
     font-size: 0.85rem;
     color: #666;
     text-align: center;
-}
-
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 2px rgba(226, 255, 61, 0.3), 0 0 2px rgba(226, 255, 61, 0.1);
-    }
-
-    50% {
-        box-shadow: 0 0 10px rgba(226, 255, 61, 0.7), 0 0 10px rgba(226, 255, 61, 0.4);
-    }
-
-    100% {
-        box-shadow: 0 0 2px rgba(226, 255, 61, 0.3), 0 0 2px rgba(226, 255, 61, 0.1);
-    }
-}
-
-
-.social-contact {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.social-contact h2 {
-    margin-bottom: 10px;
-    /* color: #e2ff3d; */
-    font-size: 1.2rem;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.social-icons a {
-    color: #fff;
-    font-size: 1.5rem;
-    transition: transform 0.2s ease;
-}
-
-.social-icons a:hover {
-    color: #e2ff3d;
-    transform: scale(1.2);
-}
-
-.tiendas {
-    text-align: center;
-    margin: 40px 0 20px;
-}
-
-.tiendas h3 {
-    font-size: 1.2rem;
-    /* color: #e2ff3d; */
-    margin-bottom: 15px;
-}
-
-.tiendas-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.tiendas-logos a {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 12px 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    animation: zoomIn 1s ease infinite alternate;
-    transition: transform 0.2s ease;
-    width: 130px;
-    display: flex;
-    justify-content: center;
-}
-
-.tiendas-logos img {
-    height: 40px;
-    max-width: 100%;
-    object-fit: contain;
-    /* filter: brightness(0) invert(1); */
-}
-
-@keyframes zoomIn {
-    0% {
-        transform: scale(0.9);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@media (max-width: 480px) {
-    .link {
-        font-size: 0.8rem;
-    }
-
-    .logo-letras {
-        width: 250px;
-    }
-
-    .social-contact {
-        margin-top: 10px;
-    }
-
-    .tiendas {
-        margin: 20px 0 10px;
-    }
 }
