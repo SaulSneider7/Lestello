@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>.:: Encuéntranos | Lestello Perú ::.</title>
+
+    <link rel="shortcut icon" href="assets/img/Logo_lestello.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lestelloGold: '#bfa15f',
+                        lestelloDarkGreen: '#1b4332'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: url("assets/img/fondo.png") center center/cover no-repeat;
+            filter: blur(3px);
+            transform: scale(1.08);
+            z-index: -2;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(255,255,255,.28);
+            z-index: -1;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        .card{
+            animation: aparecer .35s ease;
+        }
+
+        @keyframes aparecer{
+
+            from{
+                opacity:0;
+                transform:translateY(15px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body class="min-h-screen font-sans">
+
+<div class="max-w-7xl mx-auto px-5 py-8">
+
+    <!-- Cabecera -->
+
+    <div class="bg-white/55 backdrop-blur-2xl rounded-[35px] shadow-2xl border border-white/60 p-8 mb-8">
+
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+
+            <div class="flex items-center gap-5">
+
+                <img src="assets/img/Logo_lestello.png"
+                    class="w-28">
+
+                <div>
+
+                    <h1 class="text-4xl font-bold text-stone-700">
+
+                        Nuestra Red Comercial
+
+                    </h1>
+
+                    <p class="text-stone-600 mt-2">
+
+                        Encuentra los puntos de venta oficiales de Lestello Perú.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <a href="index.html"
+                class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl shadow-lg transition">
+
+                <i class="fas fa-arrow-left mr-2"></i>
+
+                Volver al Inicio
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Estadísticas -->
+
+    <div class="grid md:grid-cols-2 gap-5 mb-8">
+
+        <div class="bg-white/55 backdrop-blur-xl rounded-3xl border border-white p-6 shadow-xl">
+
+            <div class="flex items-center justify-between">
+
+                <div>
+
+                    <p class="text-stone-500">
+
+                        Ciudades
+
+                    </p>
+
+                    <h2 id="totalCiudades"
+                        class="text-4xl font-bold text-emerald-700">
+
+                        0
+
+                    </h2>
+
+                </div>
+
+                <i class="fas fa-city text-5xl text-emerald-600 opacity-30"></i>
+
+            </div>
+
+        </div>
+
+        <div class="bg-white/55 backdrop-blur-xl rounded-3xl border border-white p-6 shadow-xl">
+
+            <div class="flex items-center justify-between">
+
+                <div>
+
+                    <p class="text-stone-500">
+
+                        Establecimientos
+
+                    </p>
+
+                    <h2 id="totalLocales"
+                        class="text-4xl font-bold text-emerald-700">
+
+                        0
+
+                    </h2>
+
+                </div>
+
+                <i class="fas fa-store text-5xl text-emerald-600 opacity-30"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Buscador -->
+
+    <div class="bg-white/55 backdrop-blur-xl rounded-3xl border border-white p-5 shadow-xl mb-8">
+
+        <div class="relative">
+
+            <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-stone-400"></i>
+
+            <input
+
+                id="buscador"
+
+                type="text"
+
+                placeholder="Buscar ciudad o establecimiento..."
+
+                class="w-full rounded-xl border border-stone-200 bg-white px-12 py-4 outline-none focus:ring-2 focus:ring-emerald-500"
+
+            >
+
+        </div>
+
+    </div>
+
+    <!-- Tarjetas -->
+
+    <div
+        id="contenedorSucursales"
+        class="grid lg:grid-cols-2 gap-6">
+
+    </div>
+
+</div>
+
+<footer class="text-center text-white font-medium py-6 drop-shadow">
+
+    © 2026 Lestello Perú · Todos los derechos reservados
+
+</footer>
+
+<!-- Scripts -->
+
+<script src="assets/js/red-comercial.js"></script>
+
+<script src="assets/js/encuentranos.js"></script>
+
+</body>
+
+</html>
